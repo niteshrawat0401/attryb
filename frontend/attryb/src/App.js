@@ -6,6 +6,7 @@ import {Signup} from './pages/Signup'
 import {Login} from './pages/Login'
 import {Route, Routes} from "react-router-dom"
 import Manufacturers from './component/Manufacturers';
+import Productdealer from './component/Productdealer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Manufacturers/>
         </PrivateRoute>
         }/>
+        <Route path='/productdealer' element={<Productdealer/>}/>
       </Routes>
     </div>
   );

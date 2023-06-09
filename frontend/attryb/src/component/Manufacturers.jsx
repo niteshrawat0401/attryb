@@ -79,7 +79,7 @@ const Manufacturers = () => {
     <>
     <div>
     <div className="manufacFormdiv">
-        <h3 className="my-5 bg-purple-700 w-[8rem] text-white h-8 text-center	py-1">Manufacturers</h3>
+        <h3>Manufacturers</h3>
         <form
          onSubmit={handleSubmit} 
          className="innerForm ">
@@ -87,7 +87,6 @@ const Manufacturers = () => {
             <label>Name of model</label>
             <br />
             <input
-            className="border-2 border-red-50"
               type="text"
               name="name"
               placeholder="Name"
@@ -101,8 +100,6 @@ const Manufacturers = () => {
             <label> Year of Model</label>
             <br />
             <input
-            className="border-2 border-red-50"
-
               type="text"
               name="year"
               placeholder="Model"
@@ -116,7 +113,6 @@ const Manufacturers = () => {
             <label>price of the new vehicle</label>
             <br />
             <input
-            className="border-2 border-red-50"
 
               type="number"
               name="price"
@@ -131,7 +127,6 @@ const Manufacturers = () => {
             <label>available colors</label>
             <br />
             <input
-            className="border-2 border-red-50"
 
               type="text"
               name="colors"
@@ -146,7 +141,6 @@ const Manufacturers = () => {
             <label>mileage </label>
             <br />
             <input
-            className="border-2 border-red-50"
               type="text"
               name="mileage"
               placeholder="Mileage"
@@ -160,7 +154,6 @@ const Manufacturers = () => {
             <label>Power (in BHP)</label>
             <br />
             <input
-            className="border-2 border-red-50"
 
               type="text"
               name="power"
@@ -175,8 +168,6 @@ const Manufacturers = () => {
             <label>Max Speed</label>
             <br />
             <input
-            className="border-2 border-red-50"
-
               type="number"
               name="maxspeed"
               placeholder="Max Speed"
@@ -186,7 +177,7 @@ const Manufacturers = () => {
             />
           </div>
           <br />
-          <input className="manufacsubmit border-2 bg-purple-700 text-gray-50	" type="submit" value="Add Manufacturers" />
+          <input className="manufacsubmit" type="submit" value="Add Manufacturers" />
         </form>
       </div>
       <div className='appendtable'>
