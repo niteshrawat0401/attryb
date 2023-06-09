@@ -21,7 +21,7 @@ export const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://long-red-harp-seal-wear.cyclic.app/auth/signup", signup)
+      .post("https://attryb-peach.vercel.app/auth/signup", signup)
       .then(() => {
         // console.log(signup);
         navigate("/");
