@@ -34,7 +34,7 @@ export const Login = () => {
         // console.log(res.data);
         setlogin({ ...init });
         alert("Login sucessfully");
-        navigate("/student")
+        navigate("/manufacture")
       })
       .catch((err) => {
         alert("User not found");

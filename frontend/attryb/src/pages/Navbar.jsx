@@ -14,11 +14,11 @@ export const Navbar = () => {
   return (
     <div className="nav_div">
       <div className="innerDiv py-4	">
-        <h3 ><Link style={{color: 'white'}} to="/student">DashBoard</Link></h3>
-        <p ><Link style={{color: 'white'}} to="/student">Student</Link></p>
+        <h3 ><Link style={{color: 'white'}} to="/manufacture">Manufacturers</Link></h3>
+        {/* <p ><Link style={{color: 'white'}} to="/manufacture"></Link></p> */}
         {/* <p><Link to="/Products">Products</Link></p> */}
         {/* <p className="text-base	"><Link to="/quicknotes">Quicknotes</Link></p> */}
-        {pvtroute===null? (< Link to={"/"} style={{color: 'white'}} onClick={()=> navigate("/")}>Login </Link>):
+        {pvtroute===null? (< Link to={"/"} style={{color: 'white', marginTop: '1.4rem'}} onClick={()=> navigate("/")}>Login </Link>):
         (<p style={{color: 'white'}} onClick={logout}>Logout <Link style={{color: 'white'}}>{pvtroute.userName}</Link></p>)}
       </div>
     </div>

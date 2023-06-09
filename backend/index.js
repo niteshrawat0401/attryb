@@ -3,6 +3,7 @@ const connecttion = require("./db/db");
 const cors = require('cors')
 require("dotenv").config();
 const authRouter = require('./router/authRouter')
+const manufacturersrouter = require('./router/manufacturersrouter')
 
 
 const app = express()
@@ -17,6 +18,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
 app.use("/auth", authRouter);
+app.use("/manufacturer", manufacturersrouter);
 
 app.get('/', (req,res) => res.send('Hello'))
 

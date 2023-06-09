@@ -5,7 +5,7 @@ import { Navbar } from './pages/Navbar';
 import {Signup} from './pages/Signup'
 import {Login} from './pages/Login'
 import {Route, Routes} from "react-router-dom"
-import Home from './component/Home';
+import Manufacturers from './component/Manufacturers';
 
 function App() {
   return (
@@ -14,12 +14,11 @@ function App() {
       <Routes>
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/' element={<Login/>}/>
-        <Route path='/student' element={
+        <Route path='/manufacture' element={
         <PrivateRoute>
-        <Home/>
+        <Manufacturers/>
         </PrivateRoute>
         }/>
-        {/* <Route path='/' element={<PrivateRoute><Home/></PrivateRoute>}/> */}
       </Routes>
     </div>
   );
