@@ -21,7 +21,7 @@ export const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8080/auth/signup", signup)
+      .post("https://attryb-mwcpnhmbg-niteshrawat0401-gmailcom.vercel.app/auth/signup", signup)
       .then(() => {
         // console.log(signup);
         navigate("/");

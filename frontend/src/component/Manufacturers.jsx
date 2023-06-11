@@ -30,7 +30,7 @@ const Manufacturers = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8080/manufacturer/create", manufacturer)
+      .post("https://attryb-mwcpnhmbg-niteshrawat0401-gmailcom.vercel.app/manufacturer/create", manufacturer)
       .then((res) => {
         getData();
         setManufacturer({ ...init });
@@ -45,7 +45,7 @@ const Manufacturers = () => {
   const getData = () => {
     setLoader(true);
     axios
-      .get("http://localhost:8080/manufacturer/get")
+      .get("https://attryb-mwcpnhmbg-niteshrawat0401-gmailcom.vercel.app/manufacturer/get")
       .then((res) => {
         setData(res.data.getManufacs);
         setLoader(false);
@@ -64,7 +64,7 @@ const Manufacturers = () => {
   const handleSearchfilter = (e)=>{
     let value = e.target.value;
     if(value.length != 0){
-    axios.get(`http://localhost:8080/manufacturer/getSearch/${value}`)
+    axios.get(`https://attryb-mwcpnhmbg-niteshrawat0401-gmailcom.vercel.app/manufacturer/getSearch/${value}`)
       .then((res)=>{
         setData(res.data.search)
     })
