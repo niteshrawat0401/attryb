@@ -21,7 +21,7 @@ export const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     axios
-      .post("https://attryb-mwcpnhmbg-niteshrawat0401-gmailcom.vercel.app/auth/login", login)
+      .post("https://attryb-peach.vercel.app/auth/login", login)
       .then((res) => {
         localStorage.setItem("pvtroute", JSON.stringify({
           isLoggin : true,

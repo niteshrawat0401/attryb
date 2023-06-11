@@ -23,7 +23,7 @@ const Productdealer = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://attryb-mwcpnhmbg-niteshrawat0401-gmailcom.vercel.app/product/create", form)
+      .post("https://attryb-peach.vercel.app/product/create", form)
       .then((res) => {
         getData();
         setForm({ ...init });
@@ -37,7 +37,7 @@ const Productdealer = () => {
    const getData = () => {
     // setLoader(true);
     axios
-      .get("https://attryb-mwcpnhmbg-niteshrawat0401-gmailcom.vercel.app/product/get")
+      .get("https://attryb-peach.vercel.app/product/get")
       .then((res) => {
         setproductData(res.data.getProducts);
         // setLoader(false);
@@ -60,7 +60,7 @@ const Productdealer = () => {
       getData()
     }
     else{
-      axios.get(`https://attryb-mwcpnhmbg-niteshrawat0401-gmailcom.vercel.app/product/filter/${value}`)
+      axios.get(`https://attryb-peach.vercel.app/product/filter/${value}`)
       .then((res)=>{
           setproductData(res.data.filter)
       })
@@ -76,7 +76,7 @@ const Productdealer = () => {
       getData()
     }
     else{
-      axios.get(`https://attryb-mwcpnhmbg-niteshrawat0401-gmailcom.vercel.app/product/filtercolor/${value}`)
+      axios.get(`https://attryb-peach.vercel.app/product/filtercolor/${value}`)
       .then((res)=>{
           setproductData(res.data.filterColors)
       })
@@ -92,7 +92,7 @@ const Productdealer = () => {
       getData()
     }
     else{
-      axios.get(`https://attryb-mwcpnhmbg-niteshrawat0401-gmailcom.vercel.app/product/filtermileage/${value}`)
+      axios.get(`https://attryb-peach.vercel.app/product/filtermileage/${value}`)
       .then((res)=>{
           setproductData(res.data.filtermileage)
       })
@@ -103,7 +103,7 @@ const Productdealer = () => {
   }
   // Honda city ZX	 14.7 Blue 15kmp
   const handleDelete = (id) =>{
-    axios.delete(`https://attryb-mwcpnhmbg-niteshrawat0401-gmailcom.vercel.app/product/removecar/${id}`)
+    axios.delete(`https://attryb-peach.vercel.app/product/removecar/${id}`)
     .then((res)=>{
       console.log(res.data.deleteCar);
       getData()
