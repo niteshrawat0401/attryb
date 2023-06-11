@@ -20,7 +20,11 @@ function App() {
         <Manufacturers/>
         </PrivateRoute>
         }/>
-        <Route path='/productdealer' element={<Productdealer/>}/>
+        <Route path='/productdealer' element={
+        <PrivateRoute>
+        <Productdealer/>
+        </PrivateRoute>
+        }/>
       </Routes>
     </div>
   );

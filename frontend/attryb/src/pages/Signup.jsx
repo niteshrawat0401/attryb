@@ -21,7 +21,7 @@ export const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://attryb-peach.vercel.app/auth/signup", signup)
+      .post("http://localhost:8080/auth/signup", signup)
       .then(() => {
         // console.log(signup);
         navigate("/");

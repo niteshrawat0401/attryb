@@ -21,7 +21,7 @@ export const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     axios
-      .post("https://attryb-peach.vercel.app/auth/login", login)
+      .post("http://localhost:8080/auth/login", login)
       .then((res) => {
         localStorage.setItem("pvtroute", JSON.stringify({
           isLoggin : true,

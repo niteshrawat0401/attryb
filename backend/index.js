@@ -4,6 +4,7 @@ const cors = require('cors')
 require("dotenv").config();
 const authRouter = require('./router/authRouter')
 const manufacturersrouter = require('./router/manufacturersrouter')
+const productRouter = require('./router/productRouter')
 
 
 const app = express()
@@ -19,6 +20,7 @@ app.use(express.json())
 
 app.use("/auth", authRouter);
 app.use("/manufacturer", manufacturersrouter);
+app.use("/product", productRouter);
 
 app.get('/', (req,res) => res.send('Hello'))
 

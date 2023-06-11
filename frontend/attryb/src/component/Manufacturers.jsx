@@ -168,7 +168,7 @@ const Manufacturers = () => {
             <label>Max Speed</label>
             <br />
             <input
-              type="number"
+              type="name"
               name="maxspeed"
               placeholder="Max Speed"
               value={maxspeed}
