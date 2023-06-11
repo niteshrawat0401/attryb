@@ -94,5 +94,19 @@ productsrouter.get("/filtermileage/:key", async (req, res) => {
     }
   });
 
+  // Delete
+  productsrouter.delete("/removecar/:id", async (req, res) => {
+    const { id } = req.params;
+    const deleteCar = await Product.deleteOne({ _id: id });
+    try {
+      if (deleteCar) {
+        return res.status(201).send({ msg: "Sucessfully deleted", deleteCar });
+      }
+      return res.status(400).send({ msg: "Something wrong" });
+    } catch (error) {
+      return res.status(500).send({ msg: "Error occured while deleting" });
+    }
+  })
+
 
 module.exports = productsrouter

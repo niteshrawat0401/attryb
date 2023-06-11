@@ -101,6 +101,17 @@ const Productdealer = () => {
       })
     }
   }
+  // Honda city ZX	 14.7 Blue 15kmp
+  const handleDelete = (id) =>{
+    axios.delete(`http://localhost:8080/product/removecar/${id}`)
+    .then((res)=>{
+      console.log(res.data.deleteCar);
+      getData()
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
+  }
 
   return (
     <>
@@ -179,7 +190,7 @@ const Productdealer = () => {
         </form>
       </div>
       <div className='appendtable'>
-        <div>
+        <div className='filter_div'>
           <div>
           <select onChange={handlePrice}>
           <option value="">Price</option>
@@ -211,6 +222,7 @@ const Productdealer = () => {
                     <th>Colors</th>
                     <th>Mileage</th>
                     <th>Max Speed</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
 
@@ -223,6 +235,7 @@ const Productdealer = () => {
                       <td >{ele.colors}</td>
                       <td >{ele.mileage}</td>
                       <td >{ele.maxspeed}</td>
+                      <td style={{cursor: 'pointer'}} onClick={()=>handleDelete(ele._id)}>Delete</td>
                     </tr>
                   </tbody>
                 ))}
